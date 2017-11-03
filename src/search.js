@@ -7,12 +7,12 @@ let search = "unclelous"
 request("https://www.instagram.com/explore/tags/" + search, function (error, response, html) {
   
     const $ = cheerio.load(html);
-console.log(html)
+       //console.log(html)
+
     const results = [];
-    $("._70iju").each(function(i, element){
-        console.log("gflkjgkjlsdgfk;l")
-         const href = $(element).children[i].attr('href');
-         console.log(href);
-         results.push(href);
-    })
+    
+    for (i = 0; i < 6; i++) {
+    //need to figure out how to hit JSON point w/o re-naming window._sharedData to data
+    //console.log(_sharedData.entry_data.TagPage["0"].tag.media.nodes[i].code)
+    }
 })
