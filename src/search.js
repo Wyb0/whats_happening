@@ -10,9 +10,13 @@ request("https://www.instagram.com/explore/tags/" + search, function (error, res
        //console.log(html)
 
     const results = [];
+
+    $("script").each(function(i, element) {
+        console.log(element.children[0])
+    })
     
     for (i = 0; i < 6; i++) {
     //need to figure out how to hit JSON point w/o re-naming window._sharedData to data
-    //console.log(_sharedData.entry_data.TagPage["0"].tag.media.nodes[i].code)
+    //onsole.log(entry_data.TagPage["0"].tag.media.nodes[i].code)
     }
 })
